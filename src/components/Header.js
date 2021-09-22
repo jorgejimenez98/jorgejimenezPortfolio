@@ -26,6 +26,18 @@ export default function Header() {
         </label>
         <ul className={"menu"}>
           <li>
+            <Link to="/skills">About Me</Link>
+          </li>
+          <li>
+            <Link to="/skills">Skills</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/experience">Experience</Link>
+          </li>
+          <li>
             <Link to="/contact">Contact Me</Link>
           </li>
         </ul>
