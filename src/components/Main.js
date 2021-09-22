@@ -5,7 +5,6 @@ import SocialMedia from "./SocialMedia";
 import manOnTable from "../assets/img/manOnTable.svg";
 import { greeting } from "../portfolio";
 
-
 function Main() {
   return (
     <div className="app">
