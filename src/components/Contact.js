@@ -1,5 +1,5 @@
 import React from "react";
-import SocialMedia from "../utils/SocialMedia";
+import SocialMedia from "./SocialMedia";
 import { contactInfo } from "../portfolio";
 import { Fade } from "react-reveal";
 import contactMailDark from "../assets/img/contactMaiDark.svg";
