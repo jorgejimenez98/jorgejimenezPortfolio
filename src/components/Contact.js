@@ -24,7 +24,7 @@ export default function Contact() {
                 className="contact-detail"
                 href={"tel:" + contactInfo.cubaNumber}
               >
-                Spain {contactInfo.cubaNumber}
+                Cuba {contactInfo.cubaNumber}
               </a>
               <br />
               <br />
