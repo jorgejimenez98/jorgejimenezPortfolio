@@ -1,6 +1,7 @@
 import "./App.css";
 import { routes } from "./routes";
 import Header from "./components/Header";
+import CustomizedSnackbars from "./components/Snackbar";
 import {
   BrowserRouter as Router,
   Route,
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
       <div>
+        <CustomizedSnackbars />
         <Header />
         <Switch>
           {routes.map((route, idx) => {
