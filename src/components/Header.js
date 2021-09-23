@@ -32,9 +32,6 @@ export default function Header() {
             <Link to="/skills">Skills</Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li>
             <Link to="/experience">Experience</Link>
           </li>
           <li>
