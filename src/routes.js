@@ -1,8 +1,7 @@
 import Main from "./components/Main";
-import Contact from "./components/Contact";
+import Contact from "./components/contact/Contact";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 
 export const routes = [
@@ -10,6 +9,5 @@ export const routes = [
   { path: "/contact", component: Contact },
   { path: "/about", component: AboutMe },
   { path: "/skills", component: Skills },
-  { path: "/projects", component: Projects },
   { path: "/experience", component: Experience },
 ];
