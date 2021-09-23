@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
+import { useSelector, useDispatch } from "react-redux";
+import { send_email } from "../../redux/actions/emailActions";
+import { setSnackbar } from "../../redux/actions/snackBarActions";
+import { EMAIL } from "../../redux/constants/emailConstants";
+import { initialValues, validationSchema } from "./contact_validation";
+import Loader from "../Loader";
 import Button from "@mui/material/Button";
 import SendIcon from "@material-ui/icons/Send";
-import { initialValues, validationSchema } from "./contact_validation";
 
 function ContactForm() {
+  const dispatch = useDispatch();
+
+  const {
+    loading: loadingSend,
+    success: successSend,
+    error: errorSend,
+  } = useSelector((state) => state.emailSend);
+
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: validationSchema,
@@ -13,24 +26,23 @@ function ContactForm() {
     onSubmit: (values) => {
       const templateId = "template_iwap21m";
       const serviceId = "service_qexph0s";
-      window.emailjs
-        .send(serviceId, templateId, {
-          reply_to: values.email,
-          fullName: values.fullName,
-          message: values.message,
-        })
-        .then((res) => {
-          alert("Email successfully sent!");
-        })
-        // Handle errors here however you like, or use a React error boundary
-        .catch((err) =>
-          console.log(
-            "Oh well, you failed. Here some thoughts on the error that occured:",
-            err
-          )
-        );
+      dispatch(send_email(serviceId, templateId, values));
+      formik.resetForm();
     },
   });
+
+  useEffect(() => {
+    if (successSend) {
+      const message = "Email sended successfully";
+      dispatch(setSnackbar(true, "success", message));
+    }
+    if (errorSend) {
+      dispatch(setSnackbar(true, "error", errorSend));
+    }
+    return () => {
+      dispatch({ type: EMAIL.RESET });
+    };
+  }, [successSend, errorSend, dispatch]);
 
   return (
     <div className="container mt-4">
@@ -103,6 +115,8 @@ function ContactForm() {
             <small className="error-text">{formik.errors.message}</small>
           )}
         </div>
+
+        {loadingSend && <Loader />}
 
         <div className="text-center mt-3">
           <Button
