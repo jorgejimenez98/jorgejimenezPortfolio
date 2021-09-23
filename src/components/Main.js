@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import emoji from "react-easy-emoji";
 import SocialMedia from "./SocialMedia";
 import manOnTable from "../assets/img/manOnTable.svg";
