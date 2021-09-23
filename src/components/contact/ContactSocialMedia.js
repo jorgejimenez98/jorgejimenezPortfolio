@@ -5,7 +5,6 @@ import SocialMedia from "../SocialMedia";
 function ContactSocialMedia() {
   return (
     <div>
-      <p className={"subTitle contact-subtitle"}>{contactInfo.subtitle}</p>
       <div className={"contact-text-div"}>
         <a className="contact-detail" href={"tel:" + contactInfo.number}>
           Spain {contactInfo.number}

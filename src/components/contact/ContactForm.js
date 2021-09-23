@@ -104,14 +104,16 @@ function ContactForm() {
           )}
         </div>
 
-        <Button
-          variant="contained"
-          type="submit"
-          disabled={!formik.isValid}
-          endIcon={<SendIcon />}
-        >
-          Send
-        </Button>
+        <div className="text-center mt-3">
+          <Button
+            variant="contained"
+            type="submit"
+            disabled={!formik.isValid}
+            endIcon={<SendIcon />}
+          >
+            Send
+          </Button>
+        </div>
       </form>
     </div>
   );
