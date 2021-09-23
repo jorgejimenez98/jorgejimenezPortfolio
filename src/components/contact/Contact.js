@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import ContactSocialMedia from "./ContactSocialMedia";
 import ContactForm from "./ContactForm";
-import { contactInfo } from "../portfolio";
-import { Fade } from "react-reveal";
-import contactMailDark from "../assets/img/contactMaiDark.svg";
+import { contactInfo } from "../../portfolio";
+import { Fade } from "react-awesome-reveal";
+import contactMailDark from "../../assets/img/contactMaiDark.svg";
 
 export default function Contact() {
   const [displayForm, setDisplayForm] = useState("none");
@@ -24,18 +24,22 @@ export default function Contact() {
   };
 
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <Fade cascade duration={1000} distance="20px">
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">
             <h1 className="heading contact-title">{contactInfo.title}</h1>
 
             <div style={{ display: displaySocialMedia }}>
-              <ContactSocialMedia />
+              <Fade direction={"left"}>
+                <ContactSocialMedia />
+              </Fade>
             </div>
 
             <div style={{ display: displayForm }}>
-              <ContactForm />
+              <Fade direction={"left"}>
+                <ContactForm />
+              </Fade>
             </div>
 
             <div className="container button-direct mt-4 mr-2">
