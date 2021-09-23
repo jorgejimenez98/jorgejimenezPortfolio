@@ -3,6 +3,10 @@
   cursor: pointer;
 }
 
+.error-text {
+  color: red;
+}
+
 /* GREETINGS SECTION */
 
 .main {
