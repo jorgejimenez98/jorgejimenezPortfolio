@@ -2,7 +2,12 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-const reducer = combineReducers({});
+// REDUCERS
+import { snackbarReducer } from "./redux/reducers/snackBarReducer";
+
+const reducer = combineReducers({
+  snackbar: snackbarReducer,
+});
 
 const middleware = [thunk];
 
