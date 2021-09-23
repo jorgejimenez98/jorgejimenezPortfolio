@@ -4,7 +4,7 @@ const greeting = {
   username: "Jorge Jiménez Díaz",
   title: "Hi all, I'm George",
   subTitle: emoji(
-    "I am a software developer with 2 years 🚀 of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I'm self-motivated, fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven, and efficient code"
+    "I am a software developer with 2 years 🚀 of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I'm self-motivated, fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven and efficient code"
   ),
   displayGreeting: true,
 };
