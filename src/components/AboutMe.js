@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function AboutMe() {
-    return (
-        <div>
-            ABout me
-        </div>
-    )
+  return (
+    <div class="animated infinite bounce">
+      ABout me
+    </div>
+  );
 }
 
-export default AboutMe
+export default AboutMe;
