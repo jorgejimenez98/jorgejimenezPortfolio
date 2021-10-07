@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import Experience from "./Experience";
-import Home from "./Home";
+import Experience from "../views/Experience";
+import Home from "../views/Home";
 
 function Main() {
   return (

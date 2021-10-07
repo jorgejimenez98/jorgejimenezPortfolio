@@ -1,6 +1,6 @@
 import React from "react";
-import { contactInfo } from "../../portfolio";
-import SocialMedia from "../SocialMedia";
+import { contactInfo } from "../portfolio";
+import SocialMedia from "../containers/SocialMedia";
 
 function ContactSocialMedia() {
   return (

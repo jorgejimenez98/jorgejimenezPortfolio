@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import { useSelector, useDispatch } from "react-redux";
-import { send_email } from "../../redux/actions/emailActions";
-import { setSnackbar } from "../../redux/actions/snackBarActions";
-import { EMAIL } from "../../redux/constants/emailConstants";
-import { initialValues, validationSchema } from "./contact_validation";
-import Loader from "../Loader";
+import { send_email } from "../redux/actions/emailActions";
+import { setSnackbar } from "../redux/actions/snackBarActions";
+import { EMAIL } from "../redux/constants/emailConstants";
+import { initialValues, validationSchema } from "../validations/contact_validation";
+import Loader from "../containers/Loader";
 import Button from "@mui/material/Button";
 import SendIcon from "@material-ui/icons/Send";
 

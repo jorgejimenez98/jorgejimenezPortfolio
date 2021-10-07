@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
-import ContactSocialMedia from "./ContactSocialMedia";
-import ContactForm from "./ContactForm";
-import { contactInfo } from "../../portfolio";
+import ContactSocialMedia from "../components/ContactSocialMedia";
+import ContactForm from "../components/ContactForm";
+import { contactInfo } from "../portfolio";
 import { Fade } from "react-awesome-reveal";
-import contactMailDark from "../../assets/img/contactMaiDark.svg";
+import contactMailDark from "../assets/img/contactMaiDark.svg";
 
 export default function Contact() {
   const [displayForm, setDisplayForm] = useState("none");

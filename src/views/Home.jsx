@@ -1,6 +1,6 @@
 import React from "react";
 import emoji from "react-easy-emoji";
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "../containers/SocialMedia";
 import { greeting } from "../portfolio";
 
 function Home() {

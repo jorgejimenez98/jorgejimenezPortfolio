@@ -1,7 +1,7 @@
 import "./App.css";
 import { routes } from "./routes";
 import Header from "./components/Header";
-import CustomizedSnackbars from "./components/Snackbar";
+import CustomizedSnackbars from "./containers/Snackbar";
 import {
   BrowserRouter as Router,
   Route,
