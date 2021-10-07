@@ -55,10 +55,24 @@
   line-height: 40px;
 }
 
+.greeting-image-div {
+  height: 500px;
+}
+
 .greeting-image-div > img {
   max-width: 100%;
-  height: auto;
 }
+
+.image {
+  height: 90% !important;
+  margin-left: 20px;
+  border-radius: 50px 100px;
+  box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !important;
+  -webkit-box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !important;
+  -moz-box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !;
+}
+
+
 
 .wave-emoji {
   animation-duration: 1.8s;
@@ -117,8 +131,8 @@
   .greeting-main {
     display: block;
   }
-  .greeting-image-div {
-    height: 256px;
+  .image {
+    height: 70% !important;
   }
 }
 
