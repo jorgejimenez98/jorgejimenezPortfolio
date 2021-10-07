@@ -9,7 +9,7 @@ function ExperienceElement({ experience }) {
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       contentStyle={{ boxShadow: "5px 5px 15px 5px rgba(135, 120, 120, 0.68)" }}
-      date={experience.data}
+      date={experience.date}
       dateClassName="text-dark"
       iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
       icon={<WorkIcon />}
@@ -24,8 +24,9 @@ function ExperienceElement({ experience }) {
         </div>
         <div className="col-md-8">
           <h3 className="vertical-timeline-element-title mt-lg-4">
-            {experience.job}
+            <strong>{experience.job}</strong>
           </h3>
+          <h5>{experience.place}</h5>
           <h5 className="text-muted text-white mt-2">{experience.location}</h5>
         </div>
       </div>
