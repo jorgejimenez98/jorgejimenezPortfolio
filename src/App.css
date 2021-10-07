@@ -72,7 +72,31 @@
   -moz-box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !;
 }
 
+.shadow {
+  box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !important;
+  -webkit-box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !important;
+  -moz-box-shadow: 9px 17px 25px 5px rgba(135, 120, 120, 0.68) !;
+}
 
+.logo-experience {
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: block;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.experience-badge {
+  font-size: 11px !important;
+  text-align: left !important;
+  padding: 5px 8px 5px 8px !important;
+  vertical-align: baseline;
+  background-color: #ece9e6 !important;
+  color: black !important;
+  font-weight: lighter !important;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 
 .wave-emoji {
   animation-duration: 1.8s;
@@ -394,6 +418,12 @@
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;
+  box-shadow: 0 0 6px 0 #ece9e6 inset;
+}
+
+.separate {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .header ul {
