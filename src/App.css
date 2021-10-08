@@ -421,6 +421,11 @@
   box-shadow: 0 0 6px 0 #ece9e6 inset;
 }
 
+.languaje-image {
+  height: 27px;
+  width: 27px;
+}
+
 .separate {
   margin-left: 5px;
   margin-right: 5px;
