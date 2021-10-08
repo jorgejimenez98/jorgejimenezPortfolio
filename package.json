@@ -13,6 +13,8 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
+    "country-flag-icons": "^1.4.10",
+    "flagpack": "^1.0.5",
     "formik": "^2.2.9",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
