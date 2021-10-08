@@ -3,6 +3,7 @@ import Headroom from "react-headroom";
 import { greeting } from "../portfolio";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
+import SelectLanguaje from "./SelectLanguaje";
 
 export default function Header() {
   return (
@@ -24,7 +25,11 @@ export default function Header() {
         >
           <span className={"navicon"}></span>
         </label>
+
         <ul className={"menu"}>
+          <li>
+            <SelectLanguaje />
+          </li>
           <li>
             <Link to="/contact">Contact Me</Link>
           </li>
