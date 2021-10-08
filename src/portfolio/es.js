@@ -5,7 +5,7 @@ import Freelance from "../assets/img/Freelance.webp";
 import UniversityCMG from "../assets/img/UniversityCMG.webp";
 import MyImage from "../assets/img/my_photo1.jpg";
 
-const portfolioEs = {
+export const portfolioEs = {
   greeting: {
     username: "Jorge Jiménez Díaz",
     title: "Hola, Soy Jorge",
@@ -88,5 +88,3 @@ const portfolioEs = {
     },
   },
 };
-
-export default portfolioEs;
