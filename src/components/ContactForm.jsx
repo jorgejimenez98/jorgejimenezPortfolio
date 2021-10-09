@@ -61,7 +61,6 @@ function ContactForm() {
     if (successSend) {
       const message = portfolio.conctactForm.sended;
       dispatch(setSnackbar(true, "success", message));
-      // eslint-disable-next-line
       formik.resetForm();
     }
     if (errorSend) {
@@ -70,6 +69,7 @@ function ContactForm() {
     return () => {
       dispatch({ type: EMAIL.RESET });
     };
+    // eslint-disable-next-line
   }, [successSend, errorSend, dispatch, portfolio]);
 
   return (
