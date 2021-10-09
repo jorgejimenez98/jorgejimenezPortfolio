@@ -11,7 +11,11 @@ export default function Footer() {
         <p className={"footer-text"}>{portfolio.labels.madeBy}</p>
         <p className={"footer-text"}>
           {portfolio.labels.check}{" "}
-          <a href="https://github.com/jorgejimenez98/jorgejimenezPortfolio.git">
+          <a
+            href="https://github.com/jorgejimenez98/jorgejimenezPortfolio.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {portfolio.labels.here}
           </a>
         </p>
