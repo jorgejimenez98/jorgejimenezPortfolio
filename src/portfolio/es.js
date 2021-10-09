@@ -30,7 +30,7 @@ export const portfolioEs = {
     },
   },
   greeting: {
-    username: "Jorge Jiménez Díaz",
+    username: "Jorge Jiménez",
     title: "Hola, Soy Jorge",
     subTitle: emoji(
       "Soy desarrollador de software con 2 años de experiencia  🚀 como full-stack con Django y React, con capacidad para desarrollar aplicaciones web y android (Java). Disfruto trabajando en equipo, soy automotivado, de aprendizaje rápido, razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente."
