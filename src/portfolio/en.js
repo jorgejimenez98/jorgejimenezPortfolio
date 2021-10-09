@@ -6,6 +6,29 @@ import UniversityCMG from "../assets/img/UniversityCMG.webp";
 import MyImage from "../assets/img/my_photo1.jpg";
 
 export const portfolioEn = {
+  labels: {
+    contact: "Contact Me",
+    send_email_direct: "Send email directly",
+    go_back: "Go Back",
+    spain: "Spain",
+    experience: "Work Experience",
+  },
+  conctactForm: {
+    nameLabel: "Full Name",
+    namePlaceHolder: "Write here your name",
+    emailLabel: "Email",
+    emailPlaceHolder: "Write here your email",
+    messageLabel: "Message",
+    messagePlaceHolder: "Write here the message",
+    send: "Send",
+    sended: "Email Sended successfully",
+    validations: {
+      emailRequired: "Email is required",
+      validEmail: "Write a valid email. Example: name@gmail.com",
+      nameRequired: "Full name is required",
+      messRequired: "Message is required",
+    }
+  },
   greeting: {
     username: "Jorge Jiménez Díaz",
     title: "Hi all, I'm George",

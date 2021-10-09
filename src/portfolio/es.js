@@ -6,11 +6,34 @@ import UniversityCMG from "../assets/img/UniversityCMG.webp";
 import MyImage from "../assets/img/my_photo1.jpg";
 
 export const portfolioEs = {
+  labels: {
+    contact: "Contactar",
+    send_email_direct: "Enviar correo directamente",
+    go_back: "Volver",
+    spain: "España",
+    experience: "Experiencia Laboral",
+  },
+  conctactForm: {
+    nameLabel: "Nombre Completo",
+    namePlaceHolder: "Escribe aquí tu nombre",
+    emailLabel: "Dirección de Correo",
+    emailPlaceHolder: "Escribe aquí tu dirección de correo",
+    messageLabel: "Mensaje",
+    messagePlaceHolder: "Escribe aquí tu mensaje",
+    send: "Enviar",
+    sended: "Correo enviado satisfactoriamente",
+    validations: {
+      emailRequired: "El correo el obligatorio",
+      validEmail: "Escribe un correo válido. Ejemplo: nombre@correo.com",
+      nameRequired: "El nombre completo es obligatorio",
+      messRequired: "El mensaje es obligatorio",
+    },
+  },
   greeting: {
     username: "Jorge Jiménez Díaz",
     title: "Hola, Soy Jorge",
     subTitle: emoji(
-      "Soy desarrollador de software con 2 año de experiencia  🚀 como full-stack con Django y React, con capacidad para desarrollar aplicaciones web y android (Java). Disfruto trabajando en equipo, soy automotivado, de aprendizaje rápido, razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio,, probado y eficiente."
+      "Soy desarrollador de software con 2 años de experiencia  🚀 como full-stack con Django y React, con capacidad para desarrollar aplicaciones web y android (Java). Disfruto trabajando en equipo, soy automotivado, de aprendizaje rápido, razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente."
     ),
     displayGreeting: true,
     image: MyImage,
@@ -24,7 +47,7 @@ export const portfolioEs = {
     facebook: "https://www.facebook.com/profile.php?id=100014722274935",
   },
   contactInfo: {
-    title: emoji("Contact Me ☎️"),
+    title: emoji("Contactar ☎️"),
     subtitle:
       "Discutir sobre un proyecto o solo quieres decir hola? No hay problema, mi inbox está abierto para todos",
     number: "(+34)653513286",
