@@ -1,16 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { VerticalTimeline } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import ExperienceElement from "../components/ExperienceElement";
-import { experience } from "../portfolio";
+import "react-vertical-timeline-component/style.min.css";
 
 function Experience() {
+  const { portfolio } = useSelector((state) => state.languaje);
+
   return (
     <React.Fragment>
-      <h1 className="text-center mb-4">Work Experience</h1>
+      <h1 className="text-center mb-4">{portfolio.labels.experience}</h1>
       <VerticalTimeline>
-        <ExperienceElement experience={experience.freelance} />
-        <ExperienceElement experience={experience.ucm} />
+        <ExperienceElement experience={portfolio.experience.freelance} />
+        <ExperienceElement experience={portfolio.experience.ucm} />
       </VerticalTimeline>
     </React.Fragment>
   );

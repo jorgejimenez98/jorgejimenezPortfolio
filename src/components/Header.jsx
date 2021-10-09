@@ -1,18 +1,20 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Headroom from "react-headroom";
-import { greeting } from "../portfolio";
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import SelectLanguaje from "./SelectLanguaje";
 
 export default function Header() {
+  const { portfolio } = useSelector((state) => state.languaje);
+
   return (
     <Headroom>
       <header className={"header"}>
         <LinkContainer to={"/"}>
           <div className="logo pointer">
             <span className="grey-color"> &lt;</span>
-            <span className="logo-name">{greeting.username}</span>
+            <span className="logo-name">{portfolio.greeting.username}</span>
             <span className="grey-color">/&gt;</span>
           </div>
         </LinkContainer>
@@ -31,7 +33,7 @@ export default function Header() {
             <SelectLanguaje />
           </li>
           <li>
-            <Link to="/contact">Contact Me</Link>
+            <Link to="/contact">{portfolio.labels.contact}</Link>
           </li>
         </ul>
       </header>
