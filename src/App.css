@@ -156,7 +156,10 @@
     display: block;
   }
   .image {
-    height: 70% !important;
+    height: 100% !important;
+  }
+  .greeting-image-div {
+    height: 350px;
   }
 }
 
