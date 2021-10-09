@@ -1,20 +1,27 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLanguaje } from "../redux/actions/languajeActions";
 import { Box, MenuItem, FormControl, Select } from "@mui/material";
-
+// Images
 import SPAIN from "../assets/img/spain.png";
 import USA from "../assets/img/usa.png";
 
 function SelectLanguaje() {
-  const [age, setAge] = React.useState("en");
+  const dispatch = useDispatch();
+  const { languaje } = useSelector((state) => state.languaje);
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    dispatch(changeLanguaje(event.target.value));
   };
 
   return (
     <Box sx={{ minWidth: 120 }} border="none">
       <FormControl fullWidth>
-        <Select value={age} label="Select languaje" onChange={handleChange}>
+        <Select
+          value={languaje}
+          label="Select languaje"
+          onChange={handleChange}
+        >
           <MenuItem value={"en"}>
             <img src={USA} alt="English" className="languaje-image" />
             &nbsp; English
