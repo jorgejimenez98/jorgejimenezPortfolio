@@ -15,13 +15,9 @@ function SelectLanguaje() {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }} border="none">
-      <FormControl fullWidth>
-        <Select
-          value={languaje}
-          label="Select languaje"
-          onChange={handleChange}
-        >
+    <Box sx={{ minWidth: 120 }} className="select-lang">
+      <FormControl fullWidth variant="outlined">
+        <Select value={languaje} onChange={handleChange}>
           <MenuItem value={"en"}>
             <img src={USA} alt="English" className="languaje-image" />
             &nbsp; English
