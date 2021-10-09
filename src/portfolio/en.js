@@ -15,6 +15,7 @@ export const portfolioEn = {
     madeBy: emoji("Made with ❤️ by Jorge Jiménez"),
     check: "Check code",
     here: "here",
+    open: "Open to Work",
   },
   conctactForm: {
     nameLabel: "Full Name",
@@ -30,7 +31,7 @@ export const portfolioEn = {
       validEmail: "Write a valid email. Example: name@gmail.com",
       nameRequired: "Full name is required",
       messRequired: "Message is required",
-    }
+    },
   },
   greeting: {
     username: "Jorge Jiménez",
@@ -85,7 +86,7 @@ export const portfolioEn = {
       ],
     },
     ucm: {
-      date: "2019 - 09/2021",
+      date: "09/2020 - 09/2021",
       image: UniversityCMG,
       job: "Software Developer",
       place: "University of Camagüey",

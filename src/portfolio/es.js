@@ -15,6 +15,7 @@ export const portfolioEs = {
     madeBy: emoji("Hecho con ❤️ por Jorge Jiménez"),
     check: "Consultar código",
     here: "aquí",
+    open: "Abierto a trabajar",
   },
   conctactForm: {
     nameLabel: "Nombre Completo",
@@ -85,7 +86,7 @@ export const portfolioEs = {
       ],
     },
     ucm: {
-      date: "2019 - 09/2021",
+      date: "09/2020 - 09/2021",
       image: UniversityCMG,
       job: "Desarrollador de Software",
       place: "Universidad de Camagüey",
