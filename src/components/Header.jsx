@@ -33,6 +33,9 @@ export default function Header() {
             <SelectLanguaje />
           </li>
           <li>
+            <Link to="/experience">{portfolio.labels.experience}</Link>
+          </li>
+          <li>
             <Link to="/contact">{portfolio.labels.contact}</Link>
           </li>
         </ul>
