@@ -11,4 +11,6 @@ export const changeLanguaje = (languaje) => async (dispatch) => {
       portfolio: isEnglish ? portfolioEn : portfolioEs,
     },
   });
+
+  localStorage.setItem("languaje", languaje);
 };
