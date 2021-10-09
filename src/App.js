@@ -1,6 +1,8 @@
 import "./App.css";
 import { routes } from "./routes";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollTop from "./containers/ScrollTop";
 import CustomizedSnackbars from "./containers/Snackbar";
 import {
   BrowserRouter as Router,
@@ -30,6 +32,8 @@ function App() {
           })}
           <Redirect from="/" to="/home" />
         </Switch>
+        <Footer />
+        <ScrollTop />
       </div>
     </Router>
   );
