@@ -7,6 +7,12 @@
   color: red;
 }
 
+.text-open {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
 /* GREETINGS SECTION */
 
 .main {
@@ -47,7 +53,6 @@
 .greeting-text {
   font-size: 70px;
   line-height: 1.1;
-  color: black !important;
 }
 
 .greeting-text-p {
