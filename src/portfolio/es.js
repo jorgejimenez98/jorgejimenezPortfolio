@@ -12,6 +12,9 @@ export const portfolioEs = {
     go_back: "Volver",
     spain: "España",
     experience: "Experiencia Laboral",
+    madeBy: emoji("Hecho con ❤️ por Jorge Jiménez"),
+    check: "Consultar código",
+    here: "aquí",
   },
   conctactForm: {
     nameLabel: "Nombre Completo",

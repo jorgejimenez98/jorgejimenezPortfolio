@@ -12,6 +12,9 @@ export const portfolioEn = {
     go_back: "Go Back",
     spain: "Spain",
     experience: "Work Experience",
+    madeBy: emoji("Made with ❤️ by Jorge Jiménez"),
+    check: "Check code",
+    here: "here",
   },
   conctactForm: {
     nameLabel: "Full Name",
