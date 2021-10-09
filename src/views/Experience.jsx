@@ -9,7 +9,12 @@ function Experience() {
 
   return (
     <React.Fragment>
-      <h1 className="text-center mb-4">{portfolio.labels.experience}</h1>
+      <h1 className="text-center mt-4 text-muted">
+        {portfolio.labels.experience}
+      </h1>
+      <h1 className="animated infinite pulse text-muted text-open mt-4 mb-3">
+        {portfolio.labels.open}
+      </h1>
       <VerticalTimeline>
         <ExperienceElement experience={portfolio.experience.freelance} />
         <ExperienceElement experience={portfolio.experience.ucm} />
