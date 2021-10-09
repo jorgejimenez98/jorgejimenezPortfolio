@@ -657,3 +657,13 @@ div .logo {
 }
 
 /* END SOCIAL MEDIA SECTION */
+
+.footer-text {
+  text-align: center;
+  color: #868e96 !important;
+}
+
+.footer-div {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
