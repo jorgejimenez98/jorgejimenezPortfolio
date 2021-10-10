@@ -114,4 +114,22 @@ export const portfolioEn = {
       ],
     },
   },
+  techStack: {
+    favorite: "My main technologies",
+    tools: "Technologies",
+    experience: [
+      {
+        Stack: "Backend with Django",
+        progressPercentage: "98%",
+      },
+      {
+        Stack: "Build APIS with django-rest-framework",
+        progressPercentage: "95%",
+      },
+      {
+        Stack: "Frontend with React",
+        progressPercentage: "90%",
+      },
+    ],
+  },
 };
