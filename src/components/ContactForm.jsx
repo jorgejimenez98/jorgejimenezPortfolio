@@ -53,7 +53,7 @@ function ContactForm() {
     onSubmit: (values) => {
       const temId = languaje === "en" ? "template_iwap21m" : "template_uk6vbkn";
       const serviceId = "service_qexph0s";
-      dispatch(send_email(serviceId, temId, values));
+      dispatch(send_email(serviceId, temId, values, languaje));
     },
   });
 
