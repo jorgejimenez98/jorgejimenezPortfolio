@@ -9,7 +9,6 @@ function Main() {
       <Fade bottom duration={1000} distance="40px">
         <Home />
         <Skills />
-
       </Fade>
     </div>
   );
