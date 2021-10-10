@@ -1,6 +1,6 @@
 import { EMAIL } from "../constants/emailConstants";
 
-export const send_email = (serviceId, templateId, values) => async (
+export const send_email = (serviceId, templateId, values, languaje) => async (
   dispatch
 ) => {
   dispatch({
@@ -19,11 +19,20 @@ export const send_email = (serviceId, templateId, values) => async (
       });
     })
     .catch((err) => {
-      const message =
+      const messageEn =
         "Sorry, the server is not working. Press the (Go Back) button and use the other ways to contact me";
-      dispatch({
-        type: EMAIL.ERROR_SEND,
-        payload: message,
-      });
+      const messageEs =
+        "Perdóm, ha ocurrido un error en el servidos. Presiona el botón de (VOLVER) y usa las demás formas de ponerse en contacto conmigo";
+      if (languaje === "en") {
+        dispatch({
+          type: EMAIL.ERROR_SEND,
+          payload: messageEn,
+        });
+      } else {
+        dispatch({
+          type: EMAIL.ERROR_SEND,
+          payload: messageEs,
+        });
+      }
     });
 };
