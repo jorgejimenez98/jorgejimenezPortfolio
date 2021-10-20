@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Button } from "@mui/material";
 
-export default function SocialMedia() {
+export default function SocialMedia({ showResumeButtom }) {
   const { portfolio } = useSelector((state) => state.languaje);
 
   if (!portfolio.socialMediaLinks.display) {
@@ -48,6 +49,13 @@ export default function SocialMedia() {
         <i className="fab fa-facebook-f"></i>
         <span></span>
       </a>
+
+      {showResumeButtom && (
+        <Button variant="contained" style={{ marginLeft: "25px" }}>
+          Ver mi CV
+        </Button>
+      )}
+
     </div>
   );
 }
