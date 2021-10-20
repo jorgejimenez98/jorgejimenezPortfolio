@@ -1,16 +1,11 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 import { BootstrapDialog, BootstrapDialogTitle, Transition } from "./settings";
 import DialogContent from "@mui/material/DialogContent";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Button from "@mui/material/Button";
 
 export default function CVDialog({ open, handleClose }) {
-  const [value, setValue] = React.useState(1);
-
-  const handleChange = (event, newValue) => {
-    console.log(newValue);
-    setValue(newValue);
-  };
+  const { portfolio } = useSelector((state) => state.languaje);
 
   return (
     <div>
@@ -26,17 +21,29 @@ export default function CVDialog({ open, handleClose }) {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Modal title
+          {portfolio.labels.modal_title}
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="disabled tabs example"
-          >
-            <Tab label="Active" />
-            <Tab label="Active" />
-          </Tabs>
+          <div>
+            <Button
+              variant="outlined"
+              fullWidth
+              target="_blank"
+              href={portfolio.cv_links.simple}
+            >
+              {portfolio.labels.simple_design}
+            </Button>
+          </div>
+          <div className="mt-2">
+            <Button
+              variant="outlined"
+              fullWidth
+              target="_blank"
+              href={portfolio.cv_links.modern}
+            >
+              {portfolio.labels.simple_modern}
+            </Button>
+          </div>
         </DialogContent>
       </BootstrapDialog>
     </div>
