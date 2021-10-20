@@ -18,7 +18,7 @@ function Home() {
             <p className={"greeting-text-p subTitle"}>
               {portfolio.greeting.subTitle}
             </p>
-            <SocialMedia />
+            <SocialMedia showResumeButtom={true} />
           </div>
         </div>
         <div className="greeting-image-div text-center">
