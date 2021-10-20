@@ -6,6 +6,12 @@ import UniversityCMG from "../assets/img/UniversityCMG.webp";
 import MyImage from "../assets/img/my_photo1.jpg";
 
 export const portfolioEs = {
+  cv_links: {
+    simple:
+      "https://drive.google.com/file/d/1VKJJTAjgc0IqPlRd02QZPKmiKoj3Lr-P/view?usp=sharing",
+    modern:
+      "https://drive.google.com/file/d/1EQ9gwEcLDMR5lrhQ4V_yfxjaxZyxWc7p/view?usp=sharing",
+  },
   labels: {
     contact: "Contactar",
     send_email_direct: "Enviar correo directamente",
@@ -16,6 +22,10 @@ export const portfolioEs = {
     check: "Consultar código",
     here: "aquí",
     open: "Abierto a trabajar",
+    cv_button: "Ver mi CV",
+    modal_title: "Descargar CV en Español",
+    simple_design: "CV diseño Sencillo",
+    simple_modern: "CV diseño Moderno",
   },
   conctactForm: {
     nameLabel: "Nombre Completo",
