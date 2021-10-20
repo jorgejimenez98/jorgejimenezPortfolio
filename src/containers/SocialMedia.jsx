@@ -62,7 +62,7 @@ export default function SocialMedia({ showResumeButtom }) {
           onClick={() => setOpen(true)}
           style={{ marginLeft: "25px" }}
         >
-          Ver mi CV
+          {portfolio.labels.cv_button}
         </Button>
       )}
 
