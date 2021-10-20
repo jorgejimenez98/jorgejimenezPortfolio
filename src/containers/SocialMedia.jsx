@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Button } from "@mui/material";
+import CVDialog from "../components/CVDialog/CVDialog";
 
 export default function SocialMedia({ showResumeButtom }) {
+  const [open, setOpen] = useState(false);
   const { portfolio } = useSelector((state) => state.languaje);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   if (!portfolio.socialMediaLinks.display) {
     return null;
@@ -51,11 +57,16 @@ export default function SocialMedia({ showResumeButtom }) {
       </a>
 
       {showResumeButtom && (
-        <Button variant="contained" style={{ marginLeft: "25px" }}>
+        <Button
+          variant="contained"
+          onClick={() => setOpen(true)}
+          style={{ marginLeft: "25px" }}
+        >
           Ver mi CV
         </Button>
       )}
 
+      <CVDialog open={open} handleClose={handleClose} />
     </div>
   );
 }
