@@ -2,7 +2,9 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect("mongodb://localhost/portfolio", {
+const localdb = "mongodb://localhost/portfolio";
+
+mongoose.connect(localdb, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
