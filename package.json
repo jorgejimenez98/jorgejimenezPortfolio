@@ -1,0 +1,36 @@
+{
+  "name": "backend-portfolio",
+  "version": "2.0.0",
+  "description": "Backend for Jorge Jimenez Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgejimenez98/jorgejimenezPortfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "react",
+    "material-ui",
+    "redux"
+  ],
+  "author": "Jorge Jimenez Diaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgejimenez98/jorgejimenezPortfolio/issues"
+  },
+  "homepage": "https://github.com/jorgejimenez98/jorgejimenezPortfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.14"
+  }
+}
