@@ -3,6 +3,7 @@ const app = express();
 
 // Dependencies
 const cors = require("cors");
+require("./db");
 
 // Helpers
 const authJWT = require("./helpers/jwt");
@@ -18,7 +19,6 @@ app.use(errorHandler);
 app.use("/public/uploads", express.static(__dirname + "/public/uploads"));
 
 // ADD ROUTES TO APP
-
 
 const port = process.env.PORT || 5000;
 app.get("/", (req, res) => res.send("APP working"));
