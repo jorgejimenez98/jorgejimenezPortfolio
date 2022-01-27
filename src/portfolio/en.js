@@ -26,6 +26,7 @@ export const portfolioEn = {
     modal_title: "Download CV in English.",
     simple_design: "CV simple Design",
     simple_modern: "CV modern Design",
+    change_lang_dialog: "If you want to consult the CV in another language, simply change it from the header",
   },
   conctactForm: {
     nameLabel: "Full Name",

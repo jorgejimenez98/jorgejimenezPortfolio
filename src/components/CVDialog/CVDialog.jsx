@@ -2,6 +2,7 @@ import * as React from "react";
 import { useSelector } from "react-redux";
 import { BootstrapDialog, BootstrapDialogTitle, Transition } from "./settings";
 import DialogContent from "@mui/material/DialogContent";
+import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 export default function CVDialog({ open, handleClose }) {
@@ -43,6 +44,12 @@ export default function CVDialog({ open, handleClose }) {
             >
               {portfolio.labels.simple_modern}
             </Button>
+          </div>
+
+          <div className="mt-2 text-center">
+            <Typography variant="caption" display="block" gutterBottom>
+              {portfolio.labels.change_lang_dialog}
+            </Typography>
           </div>
         </DialogContent>
       </BootstrapDialog>

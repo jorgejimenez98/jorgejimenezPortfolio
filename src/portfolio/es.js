@@ -26,6 +26,7 @@ export const portfolioEs = {
     modal_title: "Descargar CV en Español",
     simple_design: "CV diseño Sencillo",
     simple_modern: "CV diseño Moderno",
+    change_lang_dialog: "Si desea consultar el CV en otro idioma simplemente cámbielo desde el enbabezado de la página",
   },
   conctactForm: {
     nameLabel: "Nombre Completo",
