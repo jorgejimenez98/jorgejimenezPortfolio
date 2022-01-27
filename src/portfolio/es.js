@@ -65,7 +65,6 @@ export const portfolioEs = {
     subtitle:
       "Discutir sobre un proyecto o solo quieres decir hola? No hay problema, mi inbox está abierto para todos",
     number: "(+34)653513286",
-    cubaNumber: "(+53)54046483",
     emailAddress: "georgeguitarra07@gmail.com",
   },
   experience: {

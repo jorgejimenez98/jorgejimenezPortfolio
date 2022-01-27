@@ -65,7 +65,6 @@ export const portfolioEn = {
     subtitle:
       "Discuss a project or just want to say hi? My Inbox is open for all.",
     number: "(+34)653513286",
-    cubaNumber: "(+53)54046483",
     emailAddress: "georgeguitarra07@gmail.com",
   },
   experience: {
