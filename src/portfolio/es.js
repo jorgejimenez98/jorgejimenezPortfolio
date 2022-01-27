@@ -58,7 +58,7 @@ export const portfolioEs = {
     github: "https://github.com/jorgejimenez98",
     gmail: "georgeguitarra07@gmail.com",
     linkedin:
-      "https://www.linkedin.com/in/jorge-jim%C3%A9nez-d%C3%ADaz-6590b8206/",
+      "https://www.linkedin.com/in/jorge-jimenez-6590b8206/",
     facebook: "https://www.facebook.com/profile.php?id=100014722274935",
   },
   contactInfo: {
