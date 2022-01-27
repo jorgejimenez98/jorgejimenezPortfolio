@@ -8,9 +8,9 @@ import MyImage from "../assets/img/my_photo1.jpg";
 export const portfolioEs = {
   cv_links: {
     simple:
-      "https://drive.google.com/file/d/1VKJJTAjgc0IqPlRd02QZPKmiKoj3Lr-P/view?usp=sharing",
+      "https://drive.google.com/file/d/1O33Pf7FEY46UI9ktle6eTOzaQlVm99Xn/view?usp=sharing",
     modern:
-      "https://drive.google.com/file/d/1EQ9gwEcLDMR5lrhQ4V_yfxjaxZyxWc7p/view?usp=sharing",
+      "https://drive.google.com/file/d/1y07tg_5bi6WLuX1AppDTIMoYziVW-apy/view?usp=sharing",
   },
   labels: {
     contact: "Contactar",
@@ -26,6 +26,7 @@ export const portfolioEs = {
     modal_title: "Descargar CV en Español",
     simple_design: "CV diseño Sencillo",
     simple_modern: "CV diseño Moderno",
+    change_lang_dialog: "Si desea consultar el CV en otro idioma simplemente cámbielo desde el enbabezado de la página",
   },
   conctactForm: {
     nameLabel: "Nombre Completo",
@@ -44,7 +45,7 @@ export const portfolioEs = {
     },
   },
   greeting: {
-    username: "Jorge Jiménez",
+    username: "Jorge Jimenez",
     title: "Hola, Soy Jorge",
     subTitle: emoji(
       "Soy desarrollador de software con 2 años de experiencia  🚀 como full-stack con Django y React, con capacidad para desarrollar aplicaciones web y android (Java). Disfruto trabajando en equipo, soy automotivado, de aprendizaje rápido, razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente."
@@ -65,7 +66,6 @@ export const portfolioEs = {
     subtitle:
       "Discutir sobre un proyecto o solo quieres decir hola? No hay problema, mi inbox está abierto para todos",
     number: "(+34)653513286",
-    cubaNumber: "(+53)54046483",
     emailAddress: "georgeguitarra07@gmail.com",
   },
   experience: {

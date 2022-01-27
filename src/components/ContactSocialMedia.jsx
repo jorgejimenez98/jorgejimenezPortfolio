@@ -17,14 +17,6 @@ function ContactSocialMedia() {
         <br />
         <br />
         <a
-          className="contact-detail"
-          href={"tel:" + portfolio.contactInfo.cubaNumber}
-        >
-          Cuba {portfolio.contactInfo.cubaNumber}
-        </a>
-        <br />
-        <br />
-        <a
           className="contact-detail-email"
           href={"mailto:" + portfolio.contactInfo.emailAddress}
         >
