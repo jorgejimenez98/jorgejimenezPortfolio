@@ -8,9 +8,9 @@ import MyImage from "../assets/img/my_photo1.jpg";
 export const portfolioEs = {
   cv_links: {
     simple:
-      "https://drive.google.com/file/d/1VKJJTAjgc0IqPlRd02QZPKmiKoj3Lr-P/view?usp=sharing",
+      "https://drive.google.com/file/d/1O33Pf7FEY46UI9ktle6eTOzaQlVm99Xn/view?usp=sharing",
     modern:
-      "https://drive.google.com/file/d/1EQ9gwEcLDMR5lrhQ4V_yfxjaxZyxWc7p/view?usp=sharing",
+      "https://drive.google.com/file/d/1y07tg_5bi6WLuX1AppDTIMoYziVW-apy/view?usp=sharing",
   },
   labels: {
     contact: "Contactar",
