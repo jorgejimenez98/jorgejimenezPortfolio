@@ -3,6 +3,9 @@ from solo.models import SingletonModel
 
 # Site configuration Model
 
+""" Site Configuration """
+
+
 class SiteConfiguration(SingletonModel):
     developer_name = models.CharField(max_length=255, default="")
     main_presentation_text = models.TextField(default="")
@@ -17,3 +20,15 @@ class SiteConfiguration(SingletonModel):
 
     class Meta:
         verbose_name = "Site Configuration"
+
+
+""" Social Media """
+
+
+class SocialMedia(models.Model):
+    className = models.CharField(max_length=255)
+    iconClassName = models.CharField(max_length=255)
+    link = models.URLField(default="")
+
+    def __str__(self):
+        return f'{self.className} - {self.link}'
