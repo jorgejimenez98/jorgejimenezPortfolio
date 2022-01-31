@@ -51,4 +51,16 @@ def uploadTechPath(x, filename):
 
 class Technologie(models.Model):
     name = models.CharField(max_length=255)
-    image_logo = models.ImageField(blank=True, null=True, upload_to=uploadTechPath)
+    image_logo = models.ImageField(
+        blank=True, null=True, upload_to=uploadTechPath)
+
+
+""" Curriculum """
+
+
+class Curriculum(models.Model):
+    name = models.CharField(max_length=255)
+    link = models.URLField(default="")
+
+    def __str__(self):
+        return f'Curriculum {self.name}'
