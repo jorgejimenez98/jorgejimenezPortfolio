@@ -54,3 +54,11 @@ class TechnologyViewSet(viewsets.ModelViewSet):
             return Response(TechnologieSerializer(newTech).data, status=status.HTTP_201_CREATED)
         except Exception as e:
             return Response({'detail': e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
+
+
+""" Curriculum View Set """
+
+
+class CurriculumViewSet(viewsets.ModelViewSet):
+    queryset = Curriculum.objects.all()
+    serializer_class = CurriculumSerializer
