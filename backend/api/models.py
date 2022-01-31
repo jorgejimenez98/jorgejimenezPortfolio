@@ -51,6 +51,9 @@ class Technologie(models.Model):
     name = models.CharField(max_length=255)
     image_logo = models.ImageField(blank=True, null=True, upload_to=uploadTechPath)
 
+    def __str__(self):
+        return f'tech {self.name}'
+
 
 """ Curriculum """
 
