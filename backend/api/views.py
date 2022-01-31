@@ -71,6 +71,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectMiniSerializer
 
-    def get_queryset(self, request):
+    def retrieve(self, request, pk=None):
         serializer = ProjectSerializer(self.get_object())
         return Response(serializer.data, status=status.HTTP_200_OK)
