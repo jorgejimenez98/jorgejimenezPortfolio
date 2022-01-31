@@ -62,3 +62,15 @@ class TechnologyViewSet(viewsets.ModelViewSet):
 class CurriculumViewSet(viewsets.ModelViewSet):
     queryset = Curriculum.objects.all()
     serializer_class = CurriculumSerializer
+
+
+""" Projects """
+
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectMiniSerializer
+
+    def get_queryset(self, request):
+        serializer = ProjectSerializer(self.get_object())
+        return Response(serializer.data, status=status.HTTP_200_OK)
