@@ -1,10 +1,12 @@
 from django.contrib import admin
 from solo.admin import SingletonModelAdmin
-from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum
+from . import models as m
 
 
-admin.site.register(SiteConfiguration, SingletonModelAdmin)
-admin.site.register(SocialMedia)
-admin.site.register(Main_Tech)
-admin.site.register(Technologie)
-admin.site.register(Curriculum)
+admin.site.register(m.SiteConfiguration, SingletonModelAdmin)
+admin.site.register(m.SocialMedia)
+admin.site.register(m.Main_Tech)
+admin.site.register(m.Technologie)
+admin.site.register(m.Curriculum)
+admin.site.register(m.ProjectItem)
+admin.site.register(m.Project)
