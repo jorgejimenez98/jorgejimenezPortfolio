@@ -86,7 +86,7 @@ class ProjectSerializer(ProjectMiniSerializer):
 
     class Meta:
         model = Project
-        fields = ['id', 'name', 'description', 'technologies', 'projectItems']
+        fields = ['id', 'name', 'description', 'repositoryUrl', 'technologies', 'projectItems']
 
     def get_projectItems(self, obj):
         projectItems = obj.projectItems.all()
