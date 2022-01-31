@@ -54,9 +54,16 @@ class CurriculumSerializer(serializers.ModelSerializer):
 
 
 class ProjectItemSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = ProjectItem
-        fields = '__all__'
+        fields = ['id', 'title', 'description', 'image']
+    
+    def get_image(self, obj):
+        request = self.context.get('request')
+        photo_url = request.build_absolute_uri(obj.image.url)
+        return photo_url
 
 
 class ProjectMiniSerializer(serializers.ModelSerializer):
@@ -83,5 +90,6 @@ class ProjectSerializer(ProjectMiniSerializer):
 
     def get_projectItems(self, obj):
         projectItems = obj.projectItems.all()
-        serializer = ProjectItemSerializer(projectItems, many=True)
+        request = self.context.get('request')
+        serializer = ProjectItemSerializer(projectItems, many=True, context={'request': request})
         return serializer.data
