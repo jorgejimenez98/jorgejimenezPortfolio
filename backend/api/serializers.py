@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, Project
 
-
 """ Site Configuration Serializer """
 
 
@@ -30,9 +29,16 @@ class Main_TechSerializer(serializers.ModelSerializer):
 
 
 class TechnologieSerializer(serializers.ModelSerializer):
+    image_logo = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = Technologie
-        fields = '__all__'
+        fields = ['id', 'name', 'image_logo']
+
+    def get_image_logo(self, obj):
+        request = self.context.get('request')
+        photo_url = request.build_absolute_uri(obj.image_logo.url)
+        return photo_url
 
 
 """ Curriculum Serializer """
@@ -61,8 +67,10 @@ class ProjectMiniSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'technologies']
 
     def get_technologies(self, obj):
-        techs = Technologie.objects.filter(project__id=obj.pk)
-        serializer = TechnologieSerializer(techs)
+        techs = obj.technologies.all()
+        request = self.context.get('request')
+        serializer = TechnologieSerializer(
+            techs, many=True, context={"request": request})
         return serializer.data
 
 
@@ -75,5 +83,5 @@ class ProjectSerializer(ProjectMiniSerializer):
 
     def get_projectItems(self, obj):
         projectItems = obj.projectItems.all()
-        serializer = ProjectItemSerializer(projectItems)
+        serializer = ProjectItemSerializer(projectItems, many=True)
         return serializer.data
