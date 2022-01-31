@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie
+from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum
 
 
 """ Site Configuration Serializer """
@@ -32,4 +32,13 @@ class Main_TechSerializer(serializers.ModelSerializer):
 class TechnologieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Technologie
+        fields = '__all__'
+
+
+""" Curriculum Serializer """
+
+
+class CurriculumSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Curriculum
         fields = '__all__'
