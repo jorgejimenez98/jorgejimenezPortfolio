@@ -72,7 +72,7 @@ class Curriculum(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(default="")
-    repositoryUrl = models.URLField(default="")
+    repositoryUrl = models.URLField(default="", null=True)
     technologies = models.ManyToManyField(Technologie, related_name='projects')
 
     def __str__(self):
