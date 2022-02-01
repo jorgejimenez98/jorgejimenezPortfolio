@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, \
     Project, Experience, TechnologieItem, KeyExperience
+from datetime import date
 
 """ Site Configuration Serializer """
 
@@ -118,10 +119,23 @@ class TechnologieItemSerializer(serializers.ModelSerializer):
 class ExperienceSerializer(serializers.ModelSerializer):
     key_experiences = serializers.SerializerMethodField(read_only=True)
     techs = serializers.SerializerMethodField(read_only=True)
+    time_working = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
-        model = Technologie
-        fields = "__all__"
+        model = Experience
+        fields = [
+            'id',
+            'date_start',
+            'date_end',
+            'is_currently_working',
+            'company_logo',
+            'job_rol',
+            'conmpany_name',
+            'description',
+            'time_working',
+            'key_experiences',
+            'techs',
+        ]
 
     def get_key_experiences(self, obj):
         data = obj.key_experiences.all()
@@ -132,3 +146,8 @@ class ExperienceSerializer(serializers.ModelSerializer):
         data = obj.techs.all()
         serializer = TechnologieItemSerializer(data, many=True)
         return serializer.data
+
+    def get_time_working(self, obj):
+        if obj.is_currently_working:
+            return date.today() - obj.date_start
+        return obj.date_end - obj.date_start
