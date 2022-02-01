@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, Project
+from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, \
+    Project, Experience, TechnologieItem, KeyExperience
 
 """ Site Configuration Serializer """
 
@@ -59,7 +60,7 @@ class ProjectItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectItem
         fields = ['id', 'title', 'description', 'image']
-    
+
     def get_image(self, obj):
         request = self.context.get('request')
         photo_url = request.build_absolute_uri(obj.image.url)
@@ -86,10 +87,48 @@ class ProjectSerializer(ProjectMiniSerializer):
 
     class Meta:
         model = Project
-        fields = ['id', 'name', 'description', 'repositoryUrl', 'technologies', 'projectItems']
+        fields = ['id', 'name', 'description',
+                  'repositoryUrl', 'technologies', 'projectItems']
 
     def get_projectItems(self, obj):
         projectItems = obj.projectItems.all()
         request = self.context.get('request')
-        serializer = ProjectItemSerializer(projectItems, many=True, context={'request': request})
+        serializer = ProjectItemSerializer(
+            projectItems, many=True, context={'request': request})
+        return serializer.data
+
+
+""" Experience Serializer """
+
+# Experience, TechnologieItem, KeyExperience
+
+
+class KeyExperienceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = KeyExperience
+        fields = '__all__'
+
+
+class TechnologieItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TechnologieItem
+        fields = '__all__'
+
+
+class ExperienceSerializer(serializers.ModelSerializer):
+    key_experiences = serializers.SerializerMethodField(read_only=True)
+    techs = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Technologie
+        fields = "__all__"
+
+    def get_key_experiences(self, obj):
+        data = obj.key_experiences.all()
+        serializer = KeyExperienceSerializer(data, many=True)
+        return serializer.data
+
+    def get_techs(self, obj):
+        data = obj.techs.all()
+        serializer = TechnologieItemSerializer(data, many=True)
         return serializer.data
