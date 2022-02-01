@@ -4,6 +4,7 @@
 /backend/media/experience
 /backend/media/projectitems
 /backend/media/technology
+/backend/media/profile
 
 # dependencies
 /node_modules
