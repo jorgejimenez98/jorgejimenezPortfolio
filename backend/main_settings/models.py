@@ -15,7 +15,8 @@ def uploadProfilePath(x, filename):
 
 class SiteConfiguration(SingletonModel):
     developer_name = models.CharField(max_length=255, default="")
-    main_presentations = models.ManyToManyField(TranslationText)
+    main_presentations = models.ManyToManyField(TranslationText, related_name='site_config_presentations')
+    title_presentations = models.ManyToManyField(TranslationText, related_name='site_config_titles')
     years_of_experience = models.FloatField(default=0.0)
     is_open_to_work = models.BooleanField(default=False)
     phone_number = models.CharField(max_length=255, default="")

@@ -9,6 +9,7 @@ class TranslationTextSerializer(serializers.ModelSerializer):
 
 class SiteConfigurationSerializer(serializers.ModelSerializer):
     main_presentations = serializers.SerializerMethodField(read_only=True)
+    title_presentations = serializers.SerializerMethodField(read_only=True)
     profilePicture = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
@@ -21,6 +22,7 @@ class SiteConfigurationSerializer(serializers.ModelSerializer):
             'repository_project_url',
             'developer_email',
             'profilePicture',
+            'title_presentations',
             'main_presentations',
         ]
 
@@ -30,5 +32,8 @@ class SiteConfigurationSerializer(serializers.ModelSerializer):
     
     def get_main_presentations(self, obj):
         main_presentations = obj.main_presentations.all()
-        print(main_presentations)
         return TranslationTextSerializer(main_presentations, many=True).data
+
+    def get_title_presentations(self, obj):
+        title_presentations = obj.title_presentations.all()
+        return TranslationTextSerializer(title_presentations, many=True).data
