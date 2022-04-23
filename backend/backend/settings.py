@@ -36,7 +36,9 @@ CORS_ORIGIN_WHITELIST = [
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'material',
+    'material.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
     'solo',
     # My Apps
     'api',
+    'main_settings'
 ]
 
 MIDDLEWARE = [

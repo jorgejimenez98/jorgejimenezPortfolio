@@ -1,7 +1,8 @@
 from rest_framework import routers
 from django.conf.urls import include
 from django.urls import path
-from .views import getSiteConfigurations, SocialMediaViewSet, Main_TechViewSet, TechnologyViewSet, \
+from main_settings.views import getSiteConfigurations
+from .views import SocialMediaViewSet, Main_TechViewSet, TechnologyViewSet, \
     CurriculumViewSet, ProjectViewSet, KeyExperienceViewSet, ExperienceViewSet, TechnologieItemViewSet
 
 router = routers.DefaultRouter()

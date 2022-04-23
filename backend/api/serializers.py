@@ -1,15 +1,7 @@
 from rest_framework import serializers
-from .models import SiteConfiguration, SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, \
+from .models import SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, \
     Project, Experience, TechnologieItem, KeyExperience
 from datetime import date
-
-""" Site Configuration Serializer """
-
-
-class SiteConfigurationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SiteConfiguration
-        fields = "__all__"
 
 
 """ Social Media Serializer """
@@ -95,7 +87,8 @@ class ProjectSerializer(ProjectMiniSerializer):
         projectItems = obj.projectItems.all()
         request = self.context.get('request')
         serializer = ProjectItemSerializer(
-            projectItems, many=True, context={'request': request})
+            projectItems, many=True, context={'request': request}
+        )
         return serializer.data
 
 
