@@ -2,9 +2,16 @@ from rest_framework import serializers
 from .models import SiteConfiguration, TranslationText
 
 class TranslationTextSerializer(serializers.ModelSerializer):
+    text = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = TranslationText
         fields = ['language', 'text']
+    
+    def get_text(self, obj):
+        if 'años' in obj.text or 'years' in obj.text:
+            years = obj.site_config_presentations.get().years_of_experience
+            return str(obj.text).replace('2', str(years).replace('.', ','))
+        return obj.text
 
 
 class SiteConfigurationSerializer(serializers.ModelSerializer):

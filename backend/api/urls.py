@@ -1,7 +1,7 @@
 from rest_framework import routers
 from django.conf.urls import include
 from django.urls import path
-from main_settings.views import getSiteConfigurations
+from main_settings.views import getSiteConfigurations, sendEmail
 from .views import SocialMediaViewSet, Main_TechViewSet, TechnologyViewSet, \
     CurriculumViewSet, ProjectViewSet, KeyExperienceViewSet, ExperienceViewSet, TechnologieItemViewSet
 
@@ -18,4 +18,5 @@ router.register('keyExperiences', KeyExperienceViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('getSiteConfigurations/', getSiteConfigurations),
+    path('sendEmail/', sendEmail),
 ]

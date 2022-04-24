@@ -1,38 +1,13 @@
 import { EMAIL } from "../constants/emailConstants";
+import reduxFunc from "../redux.helpers";
+import urls from "../back.urls";
 
-export const send_email = (serviceId, templateId, values, languaje) => async (
-  dispatch
-) => {
-  dispatch({
-    type: EMAIL.REQUEST_SEND,
-  });
-
-  window.emailjs
-    .send(serviceId, templateId, {
-      reply_to: values.email,
-      fullName: values.fullName,
-      message: values.message,
-    })
-    .then((res) => {
-      dispatch({
-        type: EMAIL.SUCCESS_SEND,
-      });
-    })
-    .catch((err) => {
-      const messageEn =
-        "Sorry, the server is not working. Press the (Go Back) button and use the other ways to contact me";
-      const messageEs =
-        "Perdóm, ha ocurrido un error en el servidos. Presiona el botón de (VOLVER) y usa las demás formas de ponerse en contacto conmigo";
-      if (languaje === "en") {
-        dispatch({
-          type: EMAIL.ERROR_SEND,
-          payload: messageEn,
-        });
-      } else {
-        dispatch({
-          type: EMAIL.ERROR_SEND,
-          payload: messageEs,
-        });
-      }
-    });
+export const send_email = (params) => async (dispatch) => {
+  try {
+    reduxFunc.request(dispatch, EMAIL.REQUEST_SEND);
+    const data = await reduxFunc.send_request("POST", urls.sendEmail, params);
+    reduxFunc.success(dispatch, EMAIL.SUCCESS_SEND, data);
+  } catch (error) {
+    reduxFunc.error(dispatch, EMAIL.ERROR_SEND, error);
+  }
 };

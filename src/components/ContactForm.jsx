@@ -51,9 +51,8 @@ function ContactForm() {
     validateOnChange: true,
     validateOnBlur: true,
     onSubmit: (values) => {
-      const temId = languaje === "en" ? "template_iwap21m" : "template_uk6vbkn";
-      const serviceId = "service_qexph0s";
-      dispatch(send_email(serviceId, temId, values, languaje));
+      const params = {...values, languaje}
+      dispatch(send_email(params));
     },
   });
 

@@ -23,8 +23,13 @@ const successActionType = (dispatch, actionType, data) => {
   });
 };
 
-const send_request = async (method, url) => {
-  const { data } =  method === "GET" ? await axios.get(url) : "";
+const send_request = async (method, url, params = null) => {
+  const { data } =
+    method === "GET"
+      ? await axios.get(url)
+      : method === "POST"
+      ? await axios.post(url, params)
+      : "";
   return data;
 };
 
