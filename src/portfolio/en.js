@@ -3,7 +3,6 @@ import emoji from "react-easy-emoji";
 // IMAGES
 import Freelance from "../assets/img/Freelance.webp";
 import UniversityCMG from "../assets/img/UniversityCMG.webp";
-import MyImage from "../assets/img/my_photo1.jpg";
 
 export const portfolioEn = {
   cv_links: {
@@ -43,15 +42,6 @@ export const portfolioEn = {
       nameRequired: "Full name is required",
       messRequired: "Message is required",
     },
-  },
-  greeting: {
-    username: "Jorge Jimenez",
-    title: "Hi all, I'm George",
-    subTitle: emoji(
-      "I am a software developer with 2 years 🚀 of full-stack experience with Django and React, with the ability to develop web systems and android applications. I enjoy working as a team, I'm self-motivated, fast learner, strong reasoning, problem solving skills, and skilled in creating clean, proven and efficient code"
-    ),
-    displayGreeting: true,
-    image: MyImage,
   },
   socialMediaLinks: {
     display: true,

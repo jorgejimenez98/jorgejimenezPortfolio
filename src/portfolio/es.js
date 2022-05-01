@@ -3,7 +3,6 @@ import emoji from "react-easy-emoji";
 // IMAGES
 import Freelance from "../assets/img/Freelance.webp";
 import UniversityCMG from "../assets/img/UniversityCMG.webp";
-import MyImage from "../assets/img/my_photo1.jpg";
 
 export const portfolioEs = {
   cv_links: {
@@ -43,15 +42,6 @@ export const portfolioEs = {
       nameRequired: "El nombre completo es obligatorio",
       messRequired: "El mensaje es obligatorio",
     },
-  },
-  greeting: {
-    username: "Jorge Jimenez",
-    title: "Hola, Soy Jorge",
-    subTitle: emoji(
-      "Soy desarrollador de software con 2 años de experiencia  🚀 como full-stack con Django y React, con capacidad para desarrollar aplicaciones web y android (Java). Disfruto trabajando en equipo, soy automotivado, de aprendizaje rápido, razonamiento sólido, habilidades para resolver problemas y estoy capacitado para crear código limpio, probado y eficiente."
-    ),
-    displayGreeting: true,
-    image: MyImage,
   },
   socialMediaLinks: {
     display: true,
