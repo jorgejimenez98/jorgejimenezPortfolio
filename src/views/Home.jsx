@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import getConfigurations from "../redux/actions/configurationActions";
 import SocialMedia from "../containers/SocialMedia";
 import { Loader } from "../containers";
+import { getTextTranslated } from "../helpers";
 
 function Home() {
   const dispatch = useDispatch();
@@ -13,18 +14,6 @@ function Home() {
   useEffect(() => {
     dispatch(getConfigurations());
   }, [dispatch]);
-
-  const getTittle = () => {
-    return settings.title_presentations.find(
-      (item) => item.language === languaje
-    )?.text;
-  };
-
-  const getPresentation = () => {
-    return settings.main_presentations.find(
-      (item) => item.language === languaje
-    )?.text;
-  };
 
   return (
     <React.Fragment>
@@ -37,11 +26,11 @@ function Home() {
               <div className="greeting-text-div">
                 <div>
                   <h1 className={"greeting-text"}>
-                    {getTittle()}
+                    {getTextTranslated(settings.title_presentations, languaje)}
                     <span className="wave-emoji">{emoji("👋")}</span>
                   </h1>
                   <p className={"greeting-text-p subTitle"}>
-                    {getPresentation()}
+                    {getTextTranslated(settings.main_presentations, languaje)}
                   </p>
                   <SocialMedia showResumeButtom={true} />
                 </div>
