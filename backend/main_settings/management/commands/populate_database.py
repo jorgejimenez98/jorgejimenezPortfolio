@@ -27,7 +27,7 @@ class Command(BaseCommand):
             configs.developer_name = "Jorge Jimenez"
             configs.years_of_experience = 2.5
             configs.is_open_to_work = True
-            configs.phone_number = '653513286'
+            configs.phone_number = '(+34)653513286'
             configs.repository_project_url = "https://github.com/jorgejimenez98/jorgejimenezPortfolio"
             configs.developer_email = "georgeguitarra07@gmail.com"
             configs.profilePicture = 'profile/foto.jpg'

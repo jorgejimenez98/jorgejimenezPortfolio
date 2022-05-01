@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 export default function Footer() {
   const { portfolio } = useSelector((state) => state.languaje);
+  const { settings: user } = useSelector((state) => state.settings);
 
   return (
     <Fade bottom duration={1000} distance="5px">
@@ -12,7 +13,7 @@ export default function Footer() {
         <p className={"footer-text"}>
           {portfolio.labels.check}{" "}
           <a
-            href="https://github.com/jorgejimenez98/jorgejimenezPortfolio.git"
+            href={user?.repository_project_url}
             target="_blank"
             rel="noopener noreferrer"
           >

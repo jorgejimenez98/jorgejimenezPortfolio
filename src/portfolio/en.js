@@ -19,7 +19,7 @@ export const portfolioEn = {
     open: "Open to Work",
     currentlyWorking: "Currenctly Working",
     tech: "Technologies",
-    present: 'Present',
+    present: "Present",
     keyExperience: "Key Experience",
     cv_button: "See my CV",
     modal_title: "Download CV in English.",
@@ -48,8 +48,6 @@ export const portfolioEn = {
     title: emoji("Contact Me ☎️"),
     subtitle:
       "Discuss a project or just want to say hi? My Inbox is open for all.",
-    number: "(+34)653513286",
-    emailAddress: "georgeguitarra07@gmail.com",
   },
   techStack: {
     favorite: "My main technologies",
