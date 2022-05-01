@@ -44,13 +44,6 @@ export const portfolioEn = {
       messRequired: "Message is required",
     },
   },
-  socialMediaLinks: {
-    display: true,
-    github: "https://github.com/jorgejimenez98",
-    gmail: "georgeguitarra07@gmail.com",
-    linkedin: "https://www.linkedin.com/in/jorge-jimenez-6590b8206/",
-    facebook: "https://www.facebook.com/profile.php?id=100014722274935",
-  },
   contactInfo: {
     title: emoji("Contact Me ☎️"),
     subtitle:
