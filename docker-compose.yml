@@ -1,3 +1,7 @@
+# docker-compose run backend  python backend/manage.py createsuperuser     
+# docker-compose run backend  python backend/manage.py populate_database     
+# docker-compose run backend  python backend/manage.py clean_database
+     
 version: "3"
 
 services: 
@@ -20,10 +24,8 @@ services:
 
   db:
     image: postgres:10-alpine3.14
-    environment: 
-      - POSTGRES_DB=portfolio
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - ./.env
 
   frontend:
     depends_on: 
