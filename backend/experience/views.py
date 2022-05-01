@@ -6,5 +6,5 @@ class KeyExperienceViewSet(viewsets.ModelViewSet):
     serializer_class = KeyExperienceSerializer
 
 class ExperienceViewSet(viewsets.ModelViewSet):
-    queryset = Experience.objects.all()
+    queryset = Experience.objects.all().order_by('-date_end')
     serializer_class = ExperienceSerializer

@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from experience.models import Experience, KeyExperience
 from technologie.models import TechnologieItem
+from social_media.models import SocialMedia
 from ...models import SiteConfiguration, TranslationText
 from ...constants import ENGLISH, SPANISH
 from datetime import date
@@ -15,6 +16,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self._create_site_configurations()
         self._create_expertises()
+        self._create_social_media_links()
         self.stdout.write(self.style.SUCCESS(
             'DATABASE COMPLETED SUCCESSFULLY !!!!\n----------------------'))
 
@@ -106,3 +108,12 @@ class Command(BaseCommand):
         experience.save()
         self.stdout.write(self.style.NOTICE(
             'Experience Created Successfully !!!!'))
+
+    def _create_social_media_links(self):
+        SocialMedia.objects.bulk_create([
+            SocialMedia(className="icon-button gitlab", iconClassName="fab fa-gitlab", link="https://gitlab.com/jorgejimenez98"),
+            SocialMedia(className="icon-button github", iconClassName="fab fa-github", link="https://github.com/jorgejimenez98"),
+            SocialMedia(className="icon-button linkedin", iconClassName="fab fa-linkedin-in", link="https://www.linkedin.com/in/jorge-jimenez-6590b8206/"),
+            SocialMedia(className="icon-button google", iconClassName="fab fa-google", link="http://georgeguitarra07@gmail.com"),
+            SocialMedia(className="icon-button facebook", iconClassName="fab fa-facebook-f", link="https://www.facebook.com/profile.php?id=100014722274935"),
+        ])

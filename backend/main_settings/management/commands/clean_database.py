@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from ...models import SiteConfiguration, TranslationText
 from experience.models import Experience, KeyExperience
+from social_media.models import SocialMedia
 
 class Command(BaseCommand):
     help = 'Delete DB Data'
@@ -32,3 +33,5 @@ class Command(BaseCommand):
             exp.delete()
         for keyExp in KeyExperience.objects.all():
             keyExp.delete()
+        for socialMedia in SocialMedia.objects.all():
+            socialMedia.delete()
