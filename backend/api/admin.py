@@ -4,5 +4,3 @@ from . import models as m
 
 admin.site.register(m.Main_Tech)
 admin.site.register(m.Technologie)
-admin.site.register(m.ProjectItem)
-admin.site.register(m.Project)

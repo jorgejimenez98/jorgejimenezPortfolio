@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'main_settings',
     'experience',
     'social_media',
+    'projects',
 ]
 
 MIDDLEWARE = [
