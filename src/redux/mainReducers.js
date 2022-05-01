@@ -6,6 +6,7 @@ import { emailSendReducer } from "./reducers/emailReducers";
 import { languajeReducer } from "./reducers/languajeReducers";
 import { getConfigReducer } from './reducers/configurationReducers'
 import { expertisesReducer } from './reducers/expertises.reducers'
+import { socialMediasReducer } from './reducers/socialMediaReducers'
 
 // Languajes
 import { portfolioEn } from "../portfolio/en";
@@ -38,6 +39,7 @@ export const reducers = combineReducers({
   languaje: languajeReducer,
   settings: getConfigReducer,
   expertises: expertisesReducer,
+  socialMedias: socialMediasReducer
 });
 
 export default initialState
