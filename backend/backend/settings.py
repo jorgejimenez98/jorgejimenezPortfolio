@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'solo',
     # My Apps
     'api',
+    'technologie',
     'main_settings',
     'experience',
     'social_media',
