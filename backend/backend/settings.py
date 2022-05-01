@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'solo',
     # My Apps
     'api',
-    'main_settings'
+    'main_settings',
+    'experience',
 ]
 
 MIDDLEWARE = [
