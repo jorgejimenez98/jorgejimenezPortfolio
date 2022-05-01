@@ -1,3 +1,6 @@
 from django.contrib import admin
+from . import models as m
 
-# Register your models here.
+admin.site.register(m.TechnologieItem)
+admin.site.register(m.Main_Tech)
+admin.site.register(m.Technologie)

@@ -1,9 +1,6 @@
 from rest_framework import viewsets
 from .serializers import *
 
-class TechnologieItemViewSet(viewsets.ModelViewSet):
-    queryset = TechnologieItem.objects.all()
-    serializer_class = TechnologieItemSerializer
 
 class KeyExperienceViewSet(viewsets.ModelViewSet):
     queryset = KeyExperience.objects.all()

@@ -1,8 +1,5 @@
 from rest_framework import serializers
-from .models import Main_Tech, Technologie
-
-
-""" Tech Serializers """
+from .models import Main_Tech, Technologie, TechnologieItem
 
 
 class Main_TechSerializer(serializers.ModelSerializer):
@@ -22,3 +19,8 @@ class TechnologieSerializer(serializers.ModelSerializer):
         request = self.context.get('request')
         photo_url = request.build_absolute_uri(obj.image_logo.url)
         return photo_url
+
+class TechnologieItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TechnologieItem
+        fields = '__all__'

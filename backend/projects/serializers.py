@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.serializers import TechnologieSerializer
+from technologie.serializers import TechnologieSerializer
 from .models import Project, ProjectItem
 
 class ProjectItemSerializer(serializers.ModelSerializer):

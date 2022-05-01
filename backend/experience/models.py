@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from technologie.models import TechnologieItem
 
 class KeyExperience(models.Model):
     text = models.CharField(max_length=255)
@@ -7,12 +8,6 @@ class KeyExperience(models.Model):
     def __str__(self):
         return f'Key Experience {self.text}'
 
-
-class TechnologieItem(models.Model):
-    text = models.CharField(max_length=255)
-
-    def __str__(self):
-        return f'Technologie Item {self.text}'
 
 
 def uploadExperiencePath(x, filename):

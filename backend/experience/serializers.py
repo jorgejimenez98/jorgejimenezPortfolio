@@ -1,16 +1,11 @@
 from rest_framework import serializers
+from technologie.serializers import TechnologieItemSerializer
 from .models import *
 
 
 class KeyExperienceSerializer(serializers.ModelSerializer):
     class Meta:
         model = KeyExperience
-        fields = '__all__'
-
-
-class TechnologieItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TechnologieItem
         fields = '__all__'
 
 

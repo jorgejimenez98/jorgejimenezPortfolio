@@ -1,5 +1,5 @@
 from django.db import models
-from api.models import Technologie
+from technologie.models import Technologie
 
 
 class Project(models.Model):

@@ -1,28 +1,25 @@
 from rest_framework import routers
 from django.conf.urls import include
 from django.urls import path
+from main_settings.views import getSiteConfigurations, sendEmail
 from experience.urls import router as experience_router
 from social_media.urls import router as social_media_router
 from projects.urls import router as projects_router
-from main_settings.views import getSiteConfigurations, sendEmail
-from .views import Main_TechViewSet, TechnologyViewSet
+from technologie.urls import router as techs_router
+
 
 class DefaulRouter(routers.DefaultRouter):
     def extend(self, extra_router):
         self.registry.extend(extra_router.registry)
 
-routerAux = DefaulRouter()
-routerAux.extend(experience_router)
-routerAux.extend(social_media_router)
-routerAux.extend(projects_router)
-
-router = routers.DefaultRouter()
-router.register('technologies', TechnologyViewSet)
-router.register('mainTech', Main_TechViewSet)
+router = DefaulRouter()
+router.extend(experience_router)
+router.extend(social_media_router)
+router.extend(projects_router)
+router.extend(techs_router)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('', include(routerAux.urls)),
     path('getSiteConfigurations/', getSiteConfigurations),
     path('sendEmail/', sendEmail),
 ]
