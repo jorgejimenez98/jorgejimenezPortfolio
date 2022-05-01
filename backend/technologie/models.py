@@ -24,4 +24,4 @@ class TechnologieItem(models.Model):
     text = models.CharField(max_length=255)
 
     def __str__(self):
-        return f'Technologie Item {self.text}'
+        return self.text
