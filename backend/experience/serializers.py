@@ -39,11 +39,11 @@ class ExperienceSerializer(serializers.ModelSerializer):
         return [
             {
                 'language': 'es',
-                'difference': obj.get_time_working('es')
+                'text': obj.get_time_working('es')
             },
             {
                 'language': 'en',
-                'difference': obj.get_time_working('en')
+                'text': obj.get_time_working('en')
             },
         ]
 
