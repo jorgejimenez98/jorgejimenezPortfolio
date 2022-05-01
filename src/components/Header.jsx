@@ -7,6 +7,7 @@ import SelectLanguaje from "./SelectLanguaje";
 
 export default function Header() {
   const { portfolio } = useSelector((state) => state.languaje);
+  const { settings } = useSelector((state) => state.settings);
 
   return (
     <Headroom>
@@ -14,7 +15,7 @@ export default function Header() {
         <LinkContainer to={"/"}>
           <div className="logo pointer">
             <span className="grey-color"> &lt;</span>
-            <span className="logo-name">{portfolio.greeting.username}</span>
+            <span className="logo-name">{settings?.developer_name}</span>
             <span className="grey-color">/&gt;</span>
           </div>
         </LinkContainer>

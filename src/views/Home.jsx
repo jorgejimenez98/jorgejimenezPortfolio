@@ -17,13 +17,13 @@ function Home() {
   const getTittle = () => {
     return settings.title_presentations.find(
       (item) => item.language === languaje
-    ).text;
+    )?.text;
   };
 
   const getPresentation = () => {
     return settings.main_presentations.find(
       (item) => item.language === languaje
-    ).text;
+    )?.text;
   };
 
   return (
