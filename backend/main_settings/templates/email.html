@@ -1,18 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block mainContent %}
 <div class="container">
-    <img class="text-center image" src="https://fhgst.es/wp-content/uploads/2020/04/gracias-por-tu-compra.jpg" />
-    <!-- https://previews.123rf.com/images/tkuzminka/tkuzminka1809/tkuzminka180900069/110093668-vector-illustration-header-thank-you-design-element-logo-thanks.jpg -->
-    {% if isForMe  %}
-        <h4 class="text-muted">Datos del usuario: {{ fullName }} - {{ email }}</h4>
+    {% if isForMe %}
+    <h4 class="text-muted">Datos del usuario: {{ fullName }} - {{ email }}</h4>
+    <h4 class="text-muted">Responder en: <strong>{{ languaje }}</strong></h4>
     {% endif %}
     <div class="card">
-        <p>
-            {{ message }}
-        </p>
+        <p>{{ message }}</p>
     </div>
 </div>
 {% endblock %}
