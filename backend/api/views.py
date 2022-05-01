@@ -59,18 +59,3 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def retrieve(self, request, pk=None):
         serializer = ProjectSerializer(self.get_object(), context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-""" Experiences """
-
-class TechnologieItemViewSet(viewsets.ModelViewSet):
-    queryset = TechnologieItem.objects.all()
-    serializer_class = TechnologieItemSerializer
-
-class KeyExperienceViewSet(viewsets.ModelViewSet):
-    queryset = KeyExperience.objects.all()
-    serializer_class = KeyExperienceSerializer
-
-class ExperienceViewSet(viewsets.ModelViewSet):
-    queryset = Experience.objects.all()
-    serializer_class = ExperienceSerializer

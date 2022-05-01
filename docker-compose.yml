@@ -1,3 +1,5 @@
+# docker-compose run backend  python backend/manage.py makemigrations
+# docker-compose run backend  python backend/manage.py migrate
 # docker-compose run backend  python backend/manage.py createsuperuser     
 # docker-compose run backend  python backend/manage.py populate_database     
 # docker-compose run backend  python backend/manage.py clean_database
