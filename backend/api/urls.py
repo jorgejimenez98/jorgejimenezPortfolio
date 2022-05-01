@@ -2,9 +2,9 @@ from rest_framework import routers
 from django.conf.urls import include
 from django.urls import path
 from experience.urls import router as experience_router
+from social_media.urls import router as social_media_router
 from main_settings.views import getSiteConfigurations, sendEmail
-from .views import SocialMediaViewSet, Main_TechViewSet, TechnologyViewSet, \
-    CurriculumViewSet, ProjectViewSet
+from .views import Main_TechViewSet, TechnologyViewSet, ProjectViewSet
 
 class DefaulRouter(routers.DefaultRouter):
     def extend(self, extra_router):
@@ -12,12 +12,11 @@ class DefaulRouter(routers.DefaultRouter):
 
 routerAux = DefaulRouter()
 routerAux.extend(experience_router)
+routerAux.extend(social_media_router)
 
 router = routers.DefaultRouter()
-router.register('socialMedias', SocialMediaViewSet)
 router.register('technologies', TechnologyViewSet)
 router.register('mainTech', Main_TechViewSet)
-router.register('curriculumns', CurriculumViewSet)
 router.register('projects', ProjectViewSet)
 
 urlpatterns = [

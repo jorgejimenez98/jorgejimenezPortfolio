@@ -1,15 +1,5 @@
 from rest_framework import serializers
-from .models import SocialMedia, Main_Tech, Technologie, Curriculum, ProjectItem, \
-    Project
-
-
-""" Social Media Serializer """
-
-
-class SocialMediaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SocialMedia
-        fields = '__all__'
+from .models import Main_Tech, Technologie, ProjectItem, Project
 
 
 """ Tech Serializers """
@@ -32,15 +22,6 @@ class TechnologieSerializer(serializers.ModelSerializer):
         request = self.context.get('request')
         photo_url = request.build_absolute_uri(obj.image_logo.url)
         return photo_url
-
-
-""" Curriculum Serializer """
-
-
-class CurriculumSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Curriculum
-        fields = '__all__'
 
 
 """ Projects Serializers """

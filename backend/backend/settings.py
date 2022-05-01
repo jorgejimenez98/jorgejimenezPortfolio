@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'api',
     'main_settings',
     'experience',
+    'social_media',
 ]
 
 MIDDLEWARE = [
