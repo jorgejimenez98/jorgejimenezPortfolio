@@ -5,6 +5,7 @@ import { snackbarReducer } from "./reducers/snackBarReducer";
 import { emailSendReducer } from "./reducers/emailReducers";
 import { languajeReducer } from "./reducers/languajeReducers";
 import { getConfigReducer } from './reducers/configurationReducers'
+import { expertisesReducer } from './reducers/expertises.reducers'
 
 // Languajes
 import { portfolioEn } from "../portfolio/en";
@@ -36,6 +37,7 @@ export const reducers = combineReducers({
   emailSend: emailSendReducer,
   languaje: languajeReducer,
   settings: getConfigReducer,
+  expertises: expertisesReducer,
 });
 
 export default initialState
