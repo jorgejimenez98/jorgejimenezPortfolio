@@ -46,19 +46,5 @@ export const portfolioEs = {
   techStack: {
     favorite: "Mis habilidades principales",
     tools: "Tecnologías",
-    experience: [
-      {
-        Stack: "Backend con Django",
-        progressPercentage: "98%",
-      },
-      {
-        Stack: "Contruir APIS con django-rest-framework",
-        progressPercentage: "95%",
-      },
-      {
-        Stack: "Frontend con React",
-        progressPercentage: "90%",
-      },
-    ],
   },
 };
