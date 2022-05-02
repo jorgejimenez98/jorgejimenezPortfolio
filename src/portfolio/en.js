@@ -1,12 +1,6 @@
 import emoji from "react-easy-emoji";
 
 export const portfolioEn = {
-  cv_links: {
-    simple:
-      "https://drive.google.com/file/d/1vGt9SvVAOv-2HceBGfNIs90MCgnDGbrr/view?usp=sharing",
-    modern:
-      "https://drive.google.com/file/d/1Q3--4nlcPTrohhNaGjTem5lhw-kXYE7g/view?usp=sharing",
-  },
   labels: {
     contact: "Contact Me",
     send_email_direct: "Send email directly",

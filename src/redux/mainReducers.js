@@ -1,12 +1,13 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux";
 
 // REDUCERS
 import { snackbarReducer } from "./reducers/snackBarReducer";
 import { emailSendReducer } from "./reducers/emailReducers";
 import { languajeReducer } from "./reducers/languajeReducers";
-import { getConfigReducer } from './reducers/configurationReducers'
-import { expertisesReducer } from './reducers/expertises.reducers'
-import { socialMediasReducer } from './reducers/socialMediaReducers'
+import { getConfigReducer } from "./reducers/configurationReducers";
+import { expertisesReducer } from "./reducers/expertises.reducers";
+import { socialMediasReducer } from "./reducers/socialMediaReducers";
+import { curriculumnsReducer } from "./reducers/curriculumns.reducers";
 
 // Languajes
 import { portfolioEn } from "../portfolio/en";
@@ -39,7 +40,8 @@ export const reducers = combineReducers({
   languaje: languajeReducer,
   settings: getConfigReducer,
   expertises: expertisesReducer,
-  socialMedias: socialMediasReducer
+  socialMedias: socialMediasReducer,
+  curriculumns: curriculumnsReducer,
 });
 
-export default initialState
+export default initialState;
