@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from experience.models import Experience, KeyExperience
-from technologie.models import TechnologieItem
+from technologie.models import TechnologieItem, Main_Tech
 from social_media.models import SocialMedia, Curriculum
 from ...models import SiteConfiguration, TranslationText
 from ...constants import ENGLISH, SIMPLE, SPANISH, MODERN
@@ -18,6 +18,7 @@ class Command(BaseCommand):
         self._create_technologie_items()
         self._create_expertises()
         self._create_curriculumns()
+        self._create_main_techs()
         self._create_social_media_links()
         self.stdout.write(self.style.SUCCESS(
             'DATABASE COMPLETED SUCCESSFULLY !!!!\n----------------------'))
@@ -69,6 +70,27 @@ class Command(BaseCommand):
             SocialMedia(className="icon-button facebook", iconClassName="fab fa-facebook-f", link="https://www.facebook.com/profile.php?id=100014722274935"),
         ])
         self.stdout.write(self.style.NOTICE('Social Medias Created Successfully !!!!'))
+    
+    def _create_main_techs(self):
+        main_tech = Main_Tech.objects.create(proccessPorcent='98%')
+        translation_1 = TranslationText.objects.create(language=SPANISH, text="Backend con Django")
+        translation_2 = TranslationText.objects.create(language=ENGLISH, text="Backend with Django")
+        main_tech.texts.add(translation_1)
+        main_tech.texts.add(translation_2)
+        main_tech.save()
+        main_tech = Main_Tech.objects.create(proccessPorcent='95%')
+        translation_1 = TranslationText.objects.create(language=SPANISH, text="Construir APIS con django-rest-framework")
+        translation_2 = TranslationText.objects.create(language=ENGLISH, text="Build APIS with django-rest-framework")
+        main_tech.texts.add(translation_1)
+        main_tech.texts.add(translation_2)
+        main_tech.save()
+        main_tech = Main_Tech.objects.create(proccessPorcent='90%')
+        translation_1 = TranslationText.objects.create(language=SPANISH, text="Frontend con React")
+        translation_2 = TranslationText.objects.create(language=ENGLISH, text="Frontend with React")
+        main_tech.texts.add(translation_1)
+        main_tech.texts.add(translation_2)
+        main_tech.save()
+        self.stdout.write(self.style.NOTICE('Main Rols Created Successfully !!!!'))
     
     def _create_curriculumns(self):
         Curriculum.objects.bulk_create([
