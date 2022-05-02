@@ -1,4 +1,6 @@
 from django.core.management.base import BaseCommand
+
+from technologie.models import TechnologieItem
 from ...models import SiteConfiguration, TranslationText
 from experience.models import Experience, KeyExperience
 from social_media.models import SocialMedia
@@ -35,3 +37,5 @@ class Command(BaseCommand):
             keyExp.delete()
         for socialMedia in SocialMedia.objects.all():
             socialMedia.delete()
+        for tech in TechnologieItem.objects.all():
+            tech.delete()
