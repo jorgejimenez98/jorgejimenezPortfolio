@@ -8,7 +8,7 @@ import { getConfigReducer } from "./reducers/configurationReducers";
 import { expertisesReducer } from "./reducers/expertises.reducers";
 import { socialMediasReducer } from "./reducers/socialMediaReducers";
 import { curriculumnsReducer } from "./reducers/curriculumns.reducers";
-import { getMainTechsReducer } from "./reducers/mainTechs.reducers";
+import { getMainTechsReducer, techsIconsReducers } from "./reducers/mainTechs.reducers";
 
 // Languajes
 import { portfolioEn } from "../portfolio/en";
@@ -44,6 +44,7 @@ export const reducers = combineReducers({
   socialMedias: socialMediasReducer,
   curriculumns: curriculumnsReducer,
   mainTechs: getMainTechsReducer,
+  technologies: techsIconsReducers,
 });
 
 export default initialState;

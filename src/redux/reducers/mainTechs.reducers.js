@@ -1,4 +1,4 @@
-import MAIN_TECHS from "../constants/main_techs";
+import { MAIN_TECHS, TECHS_ICONS } from "../constants/main_techs";
 
 const intialState = {
   loading: false,
@@ -21,6 +21,33 @@ export const getMainTechsReducer = (state = intialState, action) => {
 
     case MAIN_TECHS.RESET:
       return { ...intialState };
+
+    default:
+      return state;
+  }
+};
+
+const intialStateTechs = {
+  loading: false,
+  techs: [],
+  error: "",
+  settings: null,
+};
+
+export const techsIconsReducers = (state = intialStateTechs, action) => {
+  switch (action.type) {
+    case TECHS_ICONS.REQUEST_SEND:
+      return { ...intialStateTechs, loading: true };
+
+    case TECHS_ICONS.SUCCESS_SEND:
+      const techs = action.payload;
+      return { ...intialStateTechs, loading: false, techs };
+
+    case TECHS_ICONS.ERROR_SEND:
+      return { ...intialStateTechs, loading: false, error: action.payload };
+
+    case TECHS_ICONS.RESET:
+      return { ...intialStateTechs };
 
     default:
       return state;

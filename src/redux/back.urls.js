@@ -7,6 +7,7 @@ const urls = {
     socialMedia: `${baseUrl}/social_medias/`,
     curriculumns: `${baseUrl}/curriculums/`,
     mainTechs: `${baseUrl}/main_techs/`,
+    techs: `${baseUrl}/technologies_main/`,
 }
 
 export default urls
