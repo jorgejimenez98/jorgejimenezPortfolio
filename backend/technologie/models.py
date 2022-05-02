@@ -1,11 +1,12 @@
 from django.db import models
+from main_settings.models import TranslationText
 
 class Main_Tech(models.Model):
-    text = models.CharField(max_length=255)
+    texts = models.ManyToManyField(TranslationText, related_name='main_techs')
     proccessPorcent = models.CharField(max_length=255)
 
     def __str__(self):
-        return f'Main Tech {self.text} - {self.proccessPorcent}'
+        return f'Main Tech {self.pk}'
 
 
 def uploadTechPath(x, filename):
