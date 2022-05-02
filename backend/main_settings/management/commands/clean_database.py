@@ -3,7 +3,7 @@ from django.core.management.base import BaseCommand
 from technologie.models import TechnologieItem
 from ...models import SiteConfiguration, TranslationText
 from experience.models import Experience, KeyExperience
-from social_media.models import SocialMedia
+from social_media.models import SocialMedia, Curriculum
 
 class Command(BaseCommand):
     help = 'Delete DB Data'
@@ -39,3 +39,5 @@ class Command(BaseCommand):
             socialMedia.delete()
         for tech in TechnologieItem.objects.all():
             tech.delete()
+        for curr in Curriculum.objects.all():
+            curr.delete()

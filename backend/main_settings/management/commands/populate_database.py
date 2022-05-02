@@ -1,9 +1,9 @@
 from django.core.management.base import BaseCommand
 from experience.models import Experience, KeyExperience
 from technologie.models import TechnologieItem
-from social_media.models import SocialMedia
+from social_media.models import SocialMedia, Curriculum
 from ...models import SiteConfiguration, TranslationText
-from ...constants import ENGLISH, SPANISH
+from ...constants import ENGLISH, SIMPLE, SPANISH, MODERN
 from datetime import date
 
 
@@ -17,6 +17,7 @@ class Command(BaseCommand):
         self._create_site_configurations()
         self._create_technologie_items()
         self._create_expertises()
+        self._create_curriculumns()
         self._create_social_media_links()
         self.stdout.write(self.style.SUCCESS(
             'DATABASE COMPLETED SUCCESSFULLY !!!!\n----------------------'))
@@ -67,6 +68,16 @@ class Command(BaseCommand):
             SocialMedia(className="icon-button google", iconClassName="fab fa-google", link="georgeguitarra07@gmail.com"),
             SocialMedia(className="icon-button facebook", iconClassName="fab fa-facebook-f", link="https://www.facebook.com/profile.php?id=100014722274935"),
         ])
+        self.stdout.write(self.style.NOTICE('Social Medias Created Successfully !!!!'))
+    
+    def _create_curriculumns(self):
+        Curriculum.objects.bulk_create([
+            Curriculum(name=MODERN, language=ENGLISH, link="https://drive.google.com/file/d/1Q3--4nlcPTrohhNaGjTem5lhw-kXYE7g/view?usp=sharing"),
+            Curriculum(name=SIMPLE, language=ENGLISH, link="https://drive.google.com/file/d/1vGt9SvVAOv-2HceBGfNIs90MCgnDGbrr/view?usp=sharing"),
+            Curriculum(name=SIMPLE, language=SPANISH, link="https://drive.google.com/file/d/1O33Pf7FEY46UI9ktle6eTOzaQlVm99Xn/view?usp=sharing"),
+            Curriculum(name=MODERN, language=SPANISH, link="https://drive.google.com/file/d/1y07tg_5bi6WLuX1AppDTIMoYziVW-apy/view?usp=sharing"),
+        ])
+        self.stdout.write(self.style.NOTICE('Curriculums Created Successfully !!!!'))
     
     def _create_technologie_items(self):
         TechnologieItem.objects.bulk_create([
