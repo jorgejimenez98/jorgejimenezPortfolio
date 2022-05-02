@@ -3,7 +3,7 @@ from .serializers import *
 
 
 class Main_TechViewSet(viewsets.ModelViewSet):
-    queryset = Main_Tech.objects.all().order_by('-pk')
+    queryset = Main_Tech.objects.all().order_by('-proccessPorcent')
     serializer_class = Main_TechSerializer
 
 class TechnologieItemViewSet(viewsets.ModelViewSet):

@@ -149,7 +149,6 @@ class Command(BaseCommand):
             Technologie(name='SQL Server', icon_class='', image_logo='technology/sqlserver.png'),
             Technologie(name='GraphQL', icon_class='', image_logo='technology/graphql.png'),
             Technologie(name='Apollo.js', icon_class='', image_logo='technology/apollo.png'),
-            Technologie(name='Apollo.js', icon_class='', image_logo='technology/apollo.png'),
             Technologie(name='Linux', icon_class='', image_logo='technology/linux.png'),
         ])
         self.stdout.write(self.style.NOTICE('TECHS With Pictures Created Successfully !!!!'))
