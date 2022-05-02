@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from technologie.models import TechnologieItem, Main_Tech
+from technologie.models import TechnologieItem, Main_Tech, Technologie
 from ...models import SiteConfiguration, TranslationText
 from experience.models import Experience, KeyExperience
 from social_media.models import SocialMedia, Curriculum
@@ -38,6 +38,8 @@ class Command(BaseCommand):
         for socialMedia in SocialMedia.objects.all():
             socialMedia.delete()
         for tech in TechnologieItem.objects.all():
+            tech.delete()
+        for tech in Technologie.objects.all():
             tech.delete()
         for curr in Curriculum.objects.all():
             curr.delete()

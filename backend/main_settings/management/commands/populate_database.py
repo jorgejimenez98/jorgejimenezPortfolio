@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from experience.models import Experience, KeyExperience
-from technologie.models import TechnologieItem, Main_Tech
+from technologie.models import TechnologieItem, Main_Tech, Technologie
 from social_media.models import SocialMedia, Curriculum
 from ...models import SiteConfiguration, TranslationText
 from ...constants import ENGLISH, SIMPLE, SPANISH, MODERN
@@ -16,6 +16,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self._create_site_configurations()
         self._create_technologie_items()
+        self._create_techs()
         self._create_expertises()
         self._create_curriculumns()
         self._create_main_techs()
@@ -123,6 +124,35 @@ class Command(BaseCommand):
             TechnologieItem(text="PyQt5"), TechnologieItem(text="Vuex"),
         ])
         self.stdout.write(self.style.NOTICE('Technologie Items Created Successfully !!!!'))
+
+    def _create_techs(self):
+        Technologie.objects.bulk_create([
+            Technologie(name='JavaScript', icon_class='fab fa-js', image_logo=None),
+            Technologie(name='Python', icon_class='fab fa-python', image_logo=None),
+            Technologie(name='Java', icon_class='fab fa-java', image_logo=None),
+            Technologie(name='Android', icon_class='fab fa-android', image_logo=None),
+            Technologie(name='Angular', icon_class='fab fa-angular', image_logo=None),
+            Technologie(name='Reactjs', icon_class='fab fa-react', image_logo=None),
+            Technologie(name='Nodejs', icon_class='fab fa-node', image_logo=None),
+            Technologie(name='CSS3', icon_class='fab fa-css3-alt', image_logo=None),
+            Technologie(name='Bootstrap', icon_class='fab fa-bootstrap', image_logo=None),
+            Technologie(name='HTML5', icon_class='fab fa-html5', image_logo=None),
+            Technologie(name='sql-database', icon_class='fas fa-database', image_logo=None),
+            Technologie(name='Docker', icon_class='fab fa-docker', image_logo=None),
+            Technologie(name='npm', icon_class='fab fa-npm', image_logo=None),
+            Technologie(name='ReduxJS', icon_class='', image_logo='technology/redux.png'),
+            Technologie(name='Django', icon_class='', image_logo='technology/django.png'),
+            Technologie(name='REST API', icon_class='', image_logo='technology/rest-frame.png'),
+            Technologie(name='MySQL', icon_class='', image_logo='technology/mysql.png'),
+            Technologie(name='PostgreSQL', icon_class='', image_logo='technology/postgresql.svg'),
+            Technologie(name='MongoDB', icon_class='', image_logo='technology/mongodb.png'),
+            Technologie(name='SQL Server', icon_class='', image_logo='technology/sqlserver.png'),
+            Technologie(name='GraphQL', icon_class='', image_logo='technology/graphql.png'),
+            Technologie(name='Apollo.js', icon_class='', image_logo='technology/apollo.png'),
+            Technologie(name='Apollo.js', icon_class='', image_logo='technology/apollo.png'),
+            Technologie(name='Linux', icon_class='', image_logo='technology/linux.png'),
+        ])
+        self.stdout.write(self.style.NOTICE('TECHS With Pictures Created Successfully !!!!'))
 
     def _create_expertises(self):
         # Experience 1
