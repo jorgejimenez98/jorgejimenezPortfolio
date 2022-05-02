@@ -19,6 +19,10 @@ export default function SocialMedia({ showResumeButtom }) {
     setOpen(false);
   };
 
+  const hrefAux = (className) => {
+    return className.includes("google") ? "mailto:" : "";
+  };
+
   return (
     <div className="social-media-div">
       {loading ? (
@@ -28,7 +32,8 @@ export default function SocialMedia({ showResumeButtom }) {
           <React.Fragment>
             {socialMedias.map((item) => (
               <a
-                href={item.link}
+                key={item.id}
+                href={`${hrefAux(item.className)}${item.link}`}
                 className={item.className}
                 target="_blank"
                 rel="noopener noreferrer"
