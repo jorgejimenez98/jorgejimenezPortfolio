@@ -1,16 +1,19 @@
 import React from "react";
+import { getTextTranslated } from "../../helpers";
 
-function SkillsMainSkills({ portfolio }) {
+function SkillsMainSkills({ portfolio, mainTechs, languaje }) {
   return (
     <div className="skills-bar">
-      <h3 className="skills-heading text-muted">{portfolio.techStack.favorite}</h3>
-      {portfolio.techStack.experience.map((exp, i) => {
+      <h3 className="skills-heading text-muted">
+        {portfolio.techStack.favorite}
+      </h3>
+      {mainTechs.map((exp) => {
         const progressStyle = {
-          width: exp.progressPercentage,
+          width: exp.proccessPorcent,
         };
         return (
-          <div key={i} className="skill">
-            <p>{exp.Stack}</p>
+          <div key={exp.id} className="skill">
+            <p style={{'marginBottom': '-3px'}}>{getTextTranslated(exp.texts, languaje)}</p>
             <div className="meter">
               <span style={progressStyle}></span>
             </div>
